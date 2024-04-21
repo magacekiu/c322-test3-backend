@@ -72,9 +72,13 @@ public class QuestionController {
     public ResponseEntity<?> getImage(@PathVariable int id) {
         try {
             byte[] image = fileRepository.getImage(id);
-            return ResponseEntity.status(HttpStatus.FOUND)
-                    .contentType(MediaType.IMAGE_PNG)
-                    .body(image);
+            if (image != null) {
+                return ResponseEntity.ok()
+                        .contentType(MediaType.IMAGE_PNG)
+                        .body(image);
+            } else {
+                return ResponseEntity.notFound().build();
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

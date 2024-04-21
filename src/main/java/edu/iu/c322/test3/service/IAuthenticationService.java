@@ -1,6 +1,6 @@
 package edu.iu.c322.test3.service;
 
-import edu.iu.habahram.primesservice.model.Customer;
+import edu.iu.c322.test3.model.Customer;
 
 import java.io.IOException;
 

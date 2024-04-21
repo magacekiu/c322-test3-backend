@@ -18,10 +18,11 @@ public class Question {
 
     public String toLine() {
         String choicesAsString = String.join(",", getChoices());
+        String answerTrimmed = (getAnswer() == null) ? "" : getAnswer().trim();
         String line = String.format("%1s,%2s,%3s,%4s",
                 getId(),
                 getDescription().trim(),
-                getAnswer().trim(),
+                answerTrimmed,
                 choicesAsString.trim());
         return line;
     }
