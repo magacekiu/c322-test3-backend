@@ -3,7 +3,7 @@ name: Docker Image CI for GHCR
 on:
   push:
     branches:
-      - '*'
+      - master
 
 
 jobs:
@@ -36,6 +36,6 @@ jobs:
 
       - name: Build and push the image
         run: |
-          docker login --username magacekiu --password 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 ghcr.io
+          docker login --username magacekiu --password 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 ghcr.io
           docker build -t ghcr.io/magacekiu/c322-test3-backend:latest --file Dockerfile .  
-          docker push ghcr.io/magacekiu/c322-test3-backend:latest
+          docker push ghcr.io/magacekiu/c322-test3-backend:latest 
