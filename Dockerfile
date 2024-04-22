@@ -19,5 +19,5 @@ COPY ./src ./src
 RUN mvn package -DskipTests
 
 # Run the jar file 
-ENTRYPOINT ["java","-jar","/app/target/c322-test3-backend-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","/app/target/test3-0.0.1-SNAPSHOT.jar"]
 
